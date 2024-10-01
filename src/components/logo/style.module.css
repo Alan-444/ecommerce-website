@@ -1,0 +1,15 @@
+.logo {
+  display: flex;
+}
+.logo a {
+  display: flex;
+}
+.logo a img {
+  width: 150px;
+}
+
+@media (max-width: 992px) {
+  .logo a img {
+    width: 70px;
+  }
+}

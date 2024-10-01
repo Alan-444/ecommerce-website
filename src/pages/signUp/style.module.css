@@ -1,0 +1,80 @@
+.form_section {
+  padding: 48px 0;
+  align-items: center;
+}
+.login_img {
+  display: flex;
+  justify-content: center;
+}
+.login_img img {
+  width: 401px;
+}
+.login_box {
+  padding-left: 40px;
+}
+.login_box .title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33.6px;
+  color: #1aba1a;
+  padding-bottom: 11px;
+}
+.login_box .sub_title {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23.8px;
+  letter-spacing: 2px;
+  color: #999999;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+.form .form_input {
+  padding-top: 25px;
+  color: #000000;
+  position: relative;
+}
+.form .form_input label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #000000;
+  padding-bottom: 11px;
+}
+.form .form_input input {
+  width: 100%;
+  padding: 13px 12px;
+  border-radius: 6px;
+  border: 1px solid #cccccc;
+}
+.form .form_input input:focus {
+  outline: 1px solid #c0b5b5;
+}
+.form .form_input span {
+  position: absolute;
+  top: 72px;
+  right: 12px;
+}
+.login_box .submit_btn {
+  padding-top: 40px;
+}
+.login_box .submit_btn input {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #ffffff;
+  border-radius: 10px;
+  border: none;
+  background-color: #1aba1a;
+  padding: 15px 48px;
+  text-transform: uppercase;
+}
+.login_box .sign_up {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19.5px;
+  color: #999999;
+  padding-top: 15px;
+}
+.login_box .sign_up a {
+  color: #1aba1a;
+}

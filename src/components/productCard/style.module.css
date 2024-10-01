@@ -1,0 +1,115 @@
+.productCard {
+  padding: 5px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+/* .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+.image img {
+  width: 100%;
+  /* height: auto; */
+  object-fit: contain;
+  height: 200px;
+  /* display: block; */
+}
+
+.discountLabel {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  background-color: #01a49e;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.discountLabel span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.8px;
+}
+
+.details {
+  padding: 10px;
+  color: #333;
+}
+.details a {
+  text-decoration: none;
+  color: #000;
+}
+
+.rating {
+  color: #ffa726;
+  margin-bottom: 5px;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.8px;
+  margin-bottom: 13px;
+}
+
+.pricing {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21.6px;
+  margin-bottom: 20px;
+}
+
+.currentPrice {
+  color: #01a49e;
+}
+
+.originalPrice {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16.8px;
+  color: #666666;
+  text-decoration: line-through;
+}
+
+.offer_status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.status {
+  font-size: 10px;
+  padding: 5px;
+  color: #01a49e;
+  background-color: #01a49f19;
+  margin-bottom: 5px;
+  width: fit-content;
+  border-radius: 6px;
+}
+
+.stockStatus {
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20.4px;
+}
+.p_img {
+  display: flex;
+  align-items: center;
+}
+
+.p_img div {
+  width: 40px;
+  height: 40px;
+}
+.p_img div img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}

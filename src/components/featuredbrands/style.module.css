@@ -1,0 +1,33 @@
+.featuredBrands {
+  padding: 10px 15px;
+  margin-left: -15px;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.featuredBrands .fb_cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.featuredBrands .fb_cont .fb_title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+}
+.featuredBrands .fb_logos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.featuredBrands .fb_logos a {
+  width: 20%;
+  text-align: center;
+  padding: 20px 0;
+}
+@media (max-width: 425px) {
+  .featuredBrands .fb_logos {
+    gap: 50px;
+    justify-content: center;
+  }
+}

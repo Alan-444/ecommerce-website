@@ -1,0 +1,198 @@
+.bread {
+  padding: 0 !important;
+}
+
+.p_bgColor {
+  background-color: #fff;
+  padding: 30px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.p_user {
+  background: #fafafa;
+  padding: 20px;
+}
+
+.pu_image img {
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.p_user h5 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 25px;
+}
+
+.pu_email {
+  margin-bottom: 25px;
+}
+
+.pu_email a {
+  color: #666666;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.pu_acountInfo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pu_acountInfo button {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  width: 100%;
+  padding: 20px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pu_acountInfo button:focus {
+  background-color: #01a49e;
+  color: #fff;
+}
+
+.p_acountInfo h4 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+}
+
+.pa_name_last {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.pnl1 label,
+.pnl2 label {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 11px;
+}
+
+.pnl1,
+.pnl2 {
+  width: 100%;
+}
+
+.pnl1 input,
+.pnl2 input {
+  width: 100%;
+  border: 1px solid #cccccc;
+  padding: 15px 10px;
+  border-radius: 6px;
+}
+
+.pnl1 input:focus,
+.pnl2 input:focus {
+  outline: 1px solid #01a49e;
+}
+
+.p_acountInfo > form > label {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 11px;
+  margin-top: 25px;
+}
+
+.p_acountInfo > form > input {
+  width: 100%;
+  border: 1px solid #cccccc;
+  padding: 15px 10px;
+  border-radius: 6px;
+}
+
+.p_acountInfo > form > input:focus {
+  outline: 1px solid #01a49e;
+}
+
+.p_acountInfo > form > button {
+  margin-top: 45px;
+  background-color: #01a49e;
+  border: none;
+  color: #fff;
+  padding: 15px 50px;
+  border-radius: 6px;
+}
+
+/* Responsive for Tablets */
+@media (max-width: 768px) {
+  .p_bgColor {
+    padding: 20px;
+  }
+
+  .p_user h5 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .pu_acountInfo button {
+    padding: 15px;
+  }
+
+  .p_acountInfo h4 {
+    font-size: 22px;
+  }
+
+  .p_acountInfo > form > button {
+    margin-top: 35px;
+    padding: 12px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .p_bgColor {
+    padding: 15px;
+  }
+
+  .p_user h5 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .pu_email a {
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  .pu_acountInfo button {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .pa_name_last {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .p_acountInfo h4 {
+    font-size: 20px;
+  }
+
+  .p_acountInfo > form > input {
+    padding: 12px 8px;
+  }
+
+  .p_acountInfo > form > button {
+    margin-top: 30px;
+    padding: 10px 30px;
+  }
+}
