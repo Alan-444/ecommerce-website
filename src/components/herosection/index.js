@@ -52,6 +52,7 @@ const HeroSection = () => {
               <h5 className={`${styles.c_title}`}>Category</h5>
               {heroCategoryData.map((item, index) => (
                 <HeroCategory
+                  key={index}
                   icon={item.icon}
                   title={item.title}
                   count={item.count}

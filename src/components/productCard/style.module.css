@@ -55,6 +55,9 @@
   font-weight: 700;
   line-height: 16.8px;
   margin-bottom: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .pricing {

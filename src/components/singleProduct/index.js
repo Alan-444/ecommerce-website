@@ -1,56 +1,50 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-// import WishlistIcon from "../../icons/wishlist";
-import image1 from "../../assets/images/sp-img-1.png";
-import image2 from "../../assets/images/Pineapple Macbook Pro.png";
-import image3 from "../../assets/images/sp-img-2.png";
-import image4 from "../../assets/images/sp-img-3.png";
-import image5 from "../../assets/images/sp-img-4.png";
-import image6 from "../../assets/images/sp-img-5.png";
-import image7 from "../../assets/images/sp-img-6.png";
-import image8 from "../../assets/images/sp-img-7.png";
-import image9 from "../../assets/images/sp-img-8.png";
-import HeartIcon from "../../icons/heartIcon";
 import { Link, useParams } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/scrollbar";
+import "swiper/css/autoplay";
+import "swiper/css/pagination";
+import MobileProduct from "../../jsonData/mobileProduct.json";
+import ComputerProduct from "../../jsonData/computerProduct.json";
+import styles from "./style.module.css";
+import Breadcrumb from "../breadcrumb";
 import Button from "../button";
+import HeartIcon from "../../icons/heartIcon";
 import HeartIconFill from "../../icons/heartIconFill";
 import TwitterIcon from "../../icons/twitterIcon";
 import FacebookIcon from "../../icons/facebookIcon";
 import InstagramIcon from "../../icons/instagramIcon";
 import YoutubeIcon from "../../icons/youTubeIcon";
 import BeIcon from "../../icons/pintresticon";
-// import ShoppingCarIcon from "../../icons/shoppingCar";
-import Breadcrumb from "../breadcrumb";
-import { Autoplay, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/scrollbar";
-import "swiper/css/autoplay";
-import "swiper/css/pagination";
-import ProductData from "../../jsonData/productData.json";
-import styles from "./style.module.css";
+import image5 from "../../assets/images/sp-img-4.png";
+import image6 from "../../assets/images/sp-img-5.png";
+import image7 from "../../assets/images/sp-img-6.png";
+import image8 from "../../assets/images/sp-img-7.png";
+import image9 from "../../assets/images/sp-img-8.png";
 
-const ProductimgData = [
-  {
-    image: image4,
-  },
-  {
-    image: image2,
-  },
-  {
-    image: image3,
-  },
-];
-
-const breadcrumbItems = [
-  { label: "Home", to: "/" },
-  { label: "Shop", to: "/shop" },
-  { label: "Pinnapple Macbook Pro 2022 M1 / 512GB, Dark Grey" },
-];
 const SingleProduct = () => {
   const { id } = useParams();
+  const [quantity, setQuantity] = useState(1);
+  const product =
+    MobileProduct.find((product) => product.id === parseInt(id)) ||
+    ComputerProduct.find((product) => product.id === parseInt(id));
 
-  const product = ProductData.find((product) => product.id === parseInt(id));
+  const swiperRef = useRef(null);
+
+  const handleThumbnailClick = (index) => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideTo(index);
+    }
+  };
+
+  const breadcrumbItems = [
+    { label: "Home", to: "/" },
+    { label: "Shop", to: "/shop" },
+    { label: product.name },
+  ];
 
   return (
     <div className={styles.single_product}>
@@ -64,72 +58,43 @@ const SingleProduct = () => {
         <Row>
           <Col lg={5}>
             <div className={styles.sp_images}>
-              <div className={styles.spi_new}>
-                <span>New</span>
-                <span>
-                  <HeartIcon />
-                </span>
-              </div>
               <div className={styles.spi_productImage}>
                 <Swiper
                   modules={[Pagination, Autoplay]}
                   spaceBetween={20}
                   pagination={{ clickable: true }}
                   autoplay={{
-                    delay: 2000,
+                    delay: 5000,
                     disableOnInteraction: false,
                   }}
-                  onInit={(swiper) => {
-                    swiper.el.addEventListener("mouseenter", () => {
-                      swiper.autoplay.stop();
-                    });
-                    swiper.el.addEventListener("mouseleave", () => {
-                      swiper.autoplay.start();
-                    });
-                    //  document
-                    //    .querySelector(`.${styles.prev}`)
-                    //    .addEventListener("click", () => {
-                    //      swiper.slidePrev();
-                    //    });
-                    document
-                      .querySelector(`.${styles.next}`)
-                      .addEventListener("click", () => {
-                        swiper.slideNext();
-                      });
-                  }}
+                  ref={swiperRef}
                   slidesPerView={1}
                   loop={true}
                 >
-                  {/* {ProductimgData.map((item, index) => ( */}
-                    <SwiperSlide >
-                      <img src={product.mainImage} alt="product" />
+                  {product.additionalImages.map((image, index) => (
+                    <SwiperSlide key={index}>
+                      <img src={image} alt={`product ${index}`} />
                     </SwiperSlide>
-                  {/* ))} */}
+                  ))}
                 </Swiper>
+                <div className={styles.spi_new}>
+                  <span>New</span>
+                  <span>
+                    <HeartIcon />
+                  </span>
+                </div>
               </div>
               <div className={styles.spi_ProductItems}>
                 <ul>
-                  <li>
-                    <img
-                      src={product.mainImage}
-                      alt="prduct"
-                      className={styles.next}
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src={product.mainImage}
-                      alt="prduct"
-                      className={styles.next}
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src={product.mainImage}
-                      alt="prduct"
-                      className={styles.next}
-                    />
-                  </li>
+                  {product.additionalImages.map((image, index) => (
+                    <li key={index} onClick={() => handleThumbnailClick(index)}>
+                      <img
+                        src={image}
+                        alt={`thumbnail-${index}`}
+                        className={styles.next}
+                      />
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -144,7 +109,7 @@ const SingleProduct = () => {
                     <li>
                       Intel LGA 1700 Socket: Supports 13th & 12th Gen Intel Core
                     </li>
-                    <li> DDR5 Compatible: 4*SMD DIMMs with XMP 3.0 Memory</li>
+                    <li>DDR5 Compatible: 4*SMD DIMMs with XMP 3.0 Memory</li>
                     <li>
                       Commanding Power Design: Twin 16+1+2 Phases Digital VRM
                     </li>
@@ -160,7 +125,11 @@ const SingleProduct = () => {
                   <div className={styles.spd_productCount}>
                     <div className={styles.spdp_count}>
                       <button>-</button>
-                      <input type="number" value={"1"} />
+                      <input
+                        type="number"
+                        value={quantity}
+                        onChange={(e) => setQuantity(e.target.value)}
+                      />
                       <button>+</button>
                     </div>
                     <Button text={"ADD TO CART"} type={"fill"} />
@@ -253,11 +222,6 @@ const SingleProduct = () => {
           </Col>
         </Row>
       </Container>
-      <Container>
-        <Row>
-          <Col lg={12}></Col>
-        </Row>
-      </Container>
       <Container className={styles.sp_bgcolor1}>
         <Row>
           <Col lg={12}>
@@ -323,4 +287,5 @@ const SingleProduct = () => {
     </div>
   );
 };
+
 export default SingleProduct;

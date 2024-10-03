@@ -2,29 +2,47 @@ import React from "react";
 import Button from "../../components/button";
 import styles from "./style.module.css";
 import CartItem from "../shoppingCartItem/cartItem";
-import ProductCard from "../../jsonData/productData.json";
-// import { CartContext } from "../../context/cartProvider";
+import MobileProduct from "../../jsonData/mobileProduct.json";
+import ComputerProduct from "../../jsonData/computerProduct.json";
+import { useParams } from "react-router-dom";
 
 const ShoppingCard = ({ onClose, isOpen }) => {
-  // const { cart, removeFromCart, updateQuantity } = useContext(CartContext);
+  const { id } = useParams();
 
-  // const handleQuantityChange = (itemId, newQuantity) => {
-  //   updateQuantity(itemId, newQuantity);
-  // };
+  // Combine both Mobile and Computer products
+  const product =
+    MobileProduct.find((product) => product.id === parseInt(id)) ||
+    ComputerProduct.find((product) => product.id === parseInt(id));
 
-  const subtotal = ProductCard.reduce(
-    (stotle, item) => stotle + item.price * item.quantity,
-    0
-  );
+  // Handle empty product case
+  if (!product) {
+    return (
+      <>
+        <div className={styles.scOverlay} onClick={onClose}></div>
+        <div className={`${isOpen ? styles.open : ""} ${styles.sc_box}`}>
+          <h6 className={styles.card_title}>
+            Cart is empty
+            <span>
+              <button className={styles.close_button} onClick={onClose}>
+                Close x
+              </button>
+            </span>
+          </h6>
+        </div>
+      </>
+    );
+  }
 
-  const total = subtotal;
+  // Calculate subtotal
+  const subtotal = product.price * product.quantity;
 
+  // Display cart items
   return (
     <>
       <div className={styles.scOverlay} onClick={onClose}></div>
-      <div className={`${isOpen ? styles.open : ""} ${styles.sc_box} `}>
-        <h6 className={` ${styles.card_title}`}>
-          Cart ({ProductCard.length})
+      <div className={`${isOpen ? styles.open : ""} ${styles.sc_box}`}>
+        <h6 className={styles.card_title}>
+          Cart (1)
           <span>
             <button className={styles.close_button} onClick={onClose}>
               Close x
@@ -32,20 +50,15 @@ const ShoppingCard = ({ onClose, isOpen }) => {
           </span>
         </h6>
         <div className={styles.card_product}>
-          {ProductCard.map((value, index) => (
-            <CartItem
-              key={index}
-              id={value.id}
-              quantity={value.quantity}
-              imgUrl={value.mainImage}
-              name={value.title}
-              color={value.color}
-              price={value.price}
-              count={value.count}
-              // removeFromCart={removeFromCart}
-              // handleQuantityChange={handleQuantityChange}
-            />
-          ))}
+          <CartItem
+            id={product.id}
+            quantity={product.quantity}
+            imgUrl={product.mainImage}
+            name={product.name}
+            color={product.color}
+            price={product.price}
+            count={product.count}
+          />
         </div>
         <div className={styles.bottom_content}>
           <div className={`d-flex justify-content-between ${styles.subtotal}`}>
@@ -54,19 +67,11 @@ const ShoppingCard = ({ onClose, isOpen }) => {
           </div>
           <div className={`d-flex justify-content-between ${styles.total}`}>
             <span>Total</span>
-            <h6>${total.toFixed(2)}</h6>
+            <h6>${subtotal.toFixed(2)}</h6>
           </div>
-          <div className={`${styles.checkout_btn}`}>
+          <div className={styles.checkout_btn}>
             <Button text={"Checkout"} type={"fill"} to={"/checkOut"} />
-            {/* <div className={`${styles.checkCart_btn}`}> */}
             <Button text={"View Cart"} type={"textblack"} to={"/cart"} />
-            {/* <Button
-                text={"Clear Cart"}
-                type={"textblack"}
-                buttonType={"btn"}
-                onClick={clearCart}
-              /> */}
-            {/* </div> */}
           </div>
         </div>
       </div>

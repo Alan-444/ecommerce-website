@@ -18,27 +18,12 @@ import pimage4 from "../../assets/images/mobile-image-04.png";
 import pimage5 from "../../assets/images/mobile-image-05.png";
 import pimage6 from "../../assets/images/mobile-image-06.png";
 import ProductCard from "../../components/productCard";
-// import phoneimg1 from "../../assets/images/phone-img-1.png";
-// import phoneimg2 from "../../assets/images/tablet-img-1.png";
-// import phoneimg3 from "../../assets/images/phone-img-2.png";
-// import phoneimg4 from "../../assets/images/phone-img-3.png";
-// import phoneimg5 from "../../assets/images/tablet-img-2.png";
-// import pimg1 from "../../assets/images/phone-img-1.png";
-// import pimg2 from "../../assets/images/phone-img-2.png";
-// import pimg3 from "../../assets/images/phone-img-3.png";
-import timg1 from "../../assets/images/tablet-img-1.png";
-import timg2 from "../../assets/images/tablet-img-2.png";
 import pcimage1 from "../../assets/images/pc-img-01.png";
 import pcimage2 from "../../assets/images/pc-img-02.png";
 import pcimage3 from "../../assets/images/pc-img-03.png";
 import pcimage4 from "../../assets/images/pc-img-04.png";
 import pcimage5 from "../../assets/images/pc-img-05.png";
 import pcimage6 from "../../assets/images/pc-img-06.png";
-import pcimg1 from "../../assets/images/Pineapple Macbook Pro.png";
-import pcimg2 from "../../assets/images/C&O Bluetooth Speaker.png";
-import pcimg3 from "../../assets/images/Gigaby Custome Case.png";
-import pcimg4 from "../../assets/images/BEOS PC Gaming Case.png";
-import pcimg5 from "../../assets/images/aMoc All-in-one Computer.png";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -63,7 +48,8 @@ import Projector from "../../assets/images/Projectors-small.png";
 import orangeSofa from "../../assets/images/orange-sofa.png";
 import RecentlyViewed from "../../components/recentlyViewed";
 import viewimg1 from "../../assets/images/xomie-watch.png";
-import ProductData from "../../jsonData/productData.json";
+import MobileProduct from "../../jsonData/mobileProduct.json";
+import ComputerProduct from "../../jsonData/computerProduct.json";
 
 const CategoryProductCardData = [
   {
@@ -98,107 +84,6 @@ const CategoryProductCardData = [
   },
 ];
 
-// const productCardData = [
-//   {
-//     mainImage: phoneimg1,
-//     additionalImages: [""],
-//     name: "SROK Smart Phone 128GB, Oled Retina",
-//     rating: "★★★★☆ (152)",
-//     price: "359.00",
-//     discount: " 199.00",
-//     status: ["FREE SHIPPING"],
-//     stock: ["inStock"],
-//   },
-//   {
-//     mainImage: phoneimg2,
-//     additionalImages: [""],
-//     name: "aPod Pro Tablet 2023 LTE + Wifi, GPS Cellular 12.9 Inch, 512GB",
-//     rating: "★★★★☆ (152)",
-//     price: "$979.00 - $1,259.00",
-//     status: ["FREE SHIPPING"],
-//     stock: ["inStock"],
-//   },
-//   {
-//     mainImage: phoneimg3,
-//     additionalImages: [pimg1, pimg2, pimg3],
-//     name: "uLosk Mini case 2.0, Xenon i10 / 32GB / SSD 512GB / VGA 8GB",
-//     rating: "★★★★☆ (2)",
-//     price: "$1,729.00 ",
-//     originalPrice: "$2,119.00",
-//     discount: " 199.00",
-//     status: ["FREE SHIPPING"],
-//     stock: ["inStock"],
-//   },
-//   {
-//     mainImage: phoneimg4,
-//     additionalImages: [""],
-//     name: "Opplo Watch Series 8 GPS + Cellular Stainless Steel Case with Milanese Loop",
-//     price: "$979.00 - $1,259.00",
-//     status: ["$2.98 SHIPPING"],
-//     stock: ["PRE - ORDER"],
-//   },
-//   {
-//     mainImage: phoneimg5,
-//     additionalImages: [timg1, timg2],
-//     rating: "★★★★☆ (9)",
-//     name: "iSmart 24V Charger",
-//     price: "$9.00 ",
-//     originalPrice: "$12.00",
-//     discount: " 3.00",
-//     status: ["$3.98 SHIPPING"],
-//     stock: ["Contact"],
-//   },
-//   {
-//     mainImage: phoneimg1,
-//     additionalImages: [""],
-//     name: "SROK Smart Phone 128GB, Oled Retina",
-//     rating: "★★★★☆ (152)",
-//     price: "359.00",
-//     discount: " 199.00",
-//     status: ["FREE SHIPPING"],
-//     stock: ["inStock"],
-//   },
-//   {
-//     mainImage: phoneimg2,
-//     additionalImages: [""],
-//     name: "aPod Pro Tablet 2023 LTE + Wifi, GPS Cellular 12.9 Inch, 512GB",
-//     rating: "★★★★☆ (152)",
-//     price: "$979.00 - $1,259.00",
-//     status: ["FREE SHIPPING"],
-//     stock: ["inStock"],
-//   },
-//   {
-//     mainImage: phoneimg3,
-//     additionalImages: [pimg1, pimg2, pimg3],
-//     name: "uLosk Mini case 2.0, Xenon i10 / 32GB / SSD 512GB / VGA 8GB",
-//     rating: "★★★★☆ (2)",
-//     price: "$1,729.00 ",
-//     originalPrice: "$2,119.00",
-//     discount: " 199.00",
-//     status: ["FREE SHIPPING"],
-//     stock: ["inStock"],
-//   },
-//   {
-//     mainImage: phoneimg4,
-//     additionalImages: [""],
-//     name: "Opplo Watch Series 8 GPS + Cellular Stainless Steel Case with Milanese Loop",
-//     price: "$979.00 - $1,259.00",
-//     status: ["$2.98 SHIPPING"],
-//     stock: ["PRE - ORDER"],
-//   },
-//   {
-//     mainImage: phoneimg5,
-//     additionalImages: [timg1, timg2],
-//     rating: "★★★★☆ (9)",
-//     name: "iSmart 24V Charger",
-//     price: "$9.00 ",
-//     originalPrice: "$12.00",
-//     discount: " 3.00",
-//     status: ["$3.98 SHIPPING"],
-//     stock: ["Contact"],
-//   },
-// ];
-
 const CategoryProductCardData2 = [
   {
     imageUrl: pcimage1,
@@ -232,57 +117,57 @@ const CategoryProductCardData2 = [
   },
 ];
 
-const productCardData2 = [
-  {
-    mainImage: pcimg1,
-    additionalImages: [""],
-    name: "SROK Smart Phone 128GB, Oled Retina",
-    rating: "★★★★☆ (152)",
-    price: "359.00",
-    discount: " 199.00",
-    status: ["FREE SHIPPING"],
-    stock: ["inStock"],
-  },
-  {
-    mainImage: pcimg2,
-    additionalImages: [timg1, timg2],
-    name: "aPod Pro Tablet 2023 LTE + Wifi, GPS Cellular 12.9 Inch, 512GB",
-    rating: "★★★★☆ (152)",
-    price: "$979.00 - $1,259.00",
-    status: ["FREE SHIPPING"],
-    stock: ["inStock"],
-  },
-  {
-    mainImage: pcimg3,
-    additionalImages: [""],
-    name: "uLosk Mini case 2.0, Xenon i10 / 32GB / SSD 512GB / VGA 8GB",
-    rating: "★★★★☆ (2)",
-    price: "$1,729.00 ",
-    originalPrice: "$2,119.00",
-    discount: " 199.00",
-    status: ["FREE SHIPPING"],
-    stock: ["inStock"],
-  },
-  {
-    mainImage: pcimg4,
-    additionalImages: [""],
-    name: "Opplo Watch Series 8 GPS + Cellular Stainless Steel Case with Milanese Loop",
-    price: "$979.00 - $1,259.00",
-    status: ["$2.98 SHIPPING"],
-    stock: ["PRE - ORDER"],
-  },
-  {
-    mainImage: pcimg5,
-    additionalImages: [""],
-    rating: "★★★★☆ (9)",
-    name: "iSmart 24V Charger",
-    price: "$9.00 ",
-    originalPrice: "$12.00",
-    discount: " 3.00",
-    status: ["$3.98 SHIPPING"],
-    stock: ["Contact"],
-  },
-];
+// const productCardData2 = [
+//   {
+//     mainImage: pcimg1,
+//     additionalImages: [""],
+//     name: "SROK Smart Phone 128GB, Oled Retina",
+//     rating: "★★★★☆ (152)",
+//     price: "359.00",
+//     discount: " 199.00",
+//     status: ["FREE SHIPPING"],
+//     stock: ["inStock"],
+//   },
+//   {
+//     mainImage: pcimg2,
+//     additionalImages: [timg1, timg2],
+//     name: "aPod Pro Tablet 2023 LTE + Wifi, GPS Cellular 12.9 Inch, 512GB",
+//     rating: "★★★★☆ (152)",
+//     price: "$979.00 - $1,259.00",
+//     status: ["FREE SHIPPING"],
+//     stock: ["inStock"],
+//   },
+//   {
+//     mainImage: pcimg3,
+//     additionalImages: [""],
+//     name: "uLosk Mini case 2.0, Xenon i10 / 32GB / SSD 512GB / VGA 8GB",
+//     rating: "★★★★☆ (2)",
+//     price: "$1,729.00 ",
+//     originalPrice: "$2,119.00",
+//     discount: " 199.00",
+//     status: ["FREE SHIPPING"],
+//     stock: ["inStock"],
+//   },
+//   {
+//     mainImage: pcimg4,
+//     additionalImages: [""],
+//     name: "Opplo Watch Series 8 GPS + Cellular Stainless Steel Case with Milanese Loop",
+//     price: "$979.00 - $1,259.00",
+//     status: ["$2.98 SHIPPING"],
+//     stock: ["PRE - ORDER"],
+//   },
+//   {
+//     mainImage: pcimg5,
+//     additionalImages: [""],
+//     rating: "★★★★☆ (9)",
+//     name: "iSmart 24V Charger",
+//     price: "$9.00 ",
+//     originalPrice: "$12.00",
+//     discount: " 3.00",
+//     status: ["$3.98 SHIPPING"],
+//     stock: ["Contact"],
+//   },
+// ];
 
 const audioItems = [
   { image: Speakersmall, name: "Speaker", count: 12 },
@@ -362,7 +247,7 @@ const itemsData = [
   },
 ];
 
-function Home() {
+const Home = () => {
   return (
     <Fragment>
       <HeroSection />
@@ -466,7 +351,7 @@ function Home() {
                   className={styles.customSwiper}
                   loop={true}
                 >
-                  {ProductData.map((item, index) => (
+                  {MobileProduct.map((item, index) => (
                     <SwiperSlide key={index}>
                       <ProductCard product={item} />
                     </SwiperSlide>
@@ -550,7 +435,7 @@ function Home() {
                   className={styles.customSwiper}
                   loop={true}
                 >
-                  {productCardData2.map((item, index) => (
+                  {ComputerProduct.map((item, index) => (
                     <SwiperSlide key={index}>
                       <ProductCard product={item} />
                     </SwiperSlide>
@@ -733,6 +618,6 @@ function Home() {
       </Container>
     </Fragment>
   );
-}
+};
 
 export default Home;

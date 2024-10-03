@@ -29,7 +29,7 @@ const ProductCard = ({ product }) => {
       </Link>
       <div className={styles.details}>
         <div className={styles.rating}>{rating} </div>
-        <Link to={"/singleProduct"}>
+        <Link to={`/singleProduct/${id}`}>
           <div className={styles.name}>{name}</div>
         </Link>
         <div className={styles.pricing}>
