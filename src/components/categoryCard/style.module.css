@@ -1,0 +1,46 @@
+.categoryCard {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 16px;
+}
+
+.header {
+  margin-bottom: 15px;
+}
+
+.featuredItem {
+  margin-bottom: 15px;
+}
+
+.featuredItem img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.items {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.item {
+  text-align: center;
+}
+
+.item img {
+  width: 120px;
+  height: 120px;
+}
+
+.item p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.item span {
+  font-size: 12px;
+  color: gray;
+}

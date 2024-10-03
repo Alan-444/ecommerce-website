@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "mainImage": "https://m.media-amazon.com/images/I/416t0eHB3SL._SX300_SY300_QL70_FMwebp_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/416t0eHB3SL._SX300_SY300_QL70_FMwebp_.jpg",
+      "https://m.media-amazon.com/images/I/811iAYTobjL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71fWCGxkKAL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61ZartTZAML._SX679_.jpg"
+    ],
+    "name": "Samsung Galaxy M05 (Mint Green, 4GB RAM, 64 GB Storage) | 50MP Dual Camera | Bigger '6.7' HD+ Display | 5000mAh Battery | 25W Fast Charging | 2 Gen OS Upgrade & 4 Year Security Update | Without Charger",
+    "rating": "★★★★☆ (120)",
+    "price": "499.00",
+    "discount": "349.00",
+    "status": ["FREE SHIPPING"],
+    "stock": ["inStock"]
+  },
+  {
+    "id": 2,
+    "mainImage": "https://m.media-amazon.com/images/I/4184iNRaFsL._SX300_SY300_QL70_FMwebp_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/4184iNRaFsL._SX300_SY300_QL70_FMwebp_.jpg",
+      "https://m.media-amazon.com/images/I/81J-QSD9GyL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71wJIiE3dJL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61n5xGIaQpL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/51+5ZucVdsL._SX679_.jpg"
+    ],
+    "name": "realme NARZO N61 (Voyage Blue,6GB RAM+128GB Storage) 90Hz Eye Comfort Display | IP54 Dust & Water Resistance | 48-Month Fluency | Charger in The Box",
+    "rating": "★★★★☆ (80)",
+    "price": "$699.00 - $799.00",
+    "status": ["FREE SHIPPING"],
+    "stock": ["inStock"]
+  },
+  {
+    "id": 3,
+    "mainImage": "https://m.media-amazon.com/images/I/41-oAXcWXaL._SY300_SX300_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/61slrN5n-FL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61gaK6HTjKL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/511nLbHvqnL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/41hc-2zJc7L._SX679_.jpg"
+    ],
+    "name": "vivo Y18i (Space Black, 4GB RAM, 64GB Storage) with No Cost EMI/Additional Exchange Offers |Without Charger",
+    "rating": "★★★★☆ (65)",
+    "price": "$1,299.00",
+    "originalPrice": "$1,599.00",
+    "discount": "300.00",
+    "status": ["FREE SHIPPING"],
+    "stock": ["inStock"]
+  },
+  {
+    "id": 4,
+    "mainImage": "https://m.media-amazon.com/images/I/41o61kBDGdL._SX300_SY300_QL70_FMwebp_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/41o61kBDGdL._SX300_SY300_QL70_FMwebp_.jpg",
+      "https://m.media-amazon.com/images/I/61tP8bXbWZL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/21S9xciDu2L._SX38_SY50_CR,0,0,38,50_.jpg",
+      "https://m.media-amazon.com/images/I/317l8qYtQvL._SX679_.jpg"
+    ],
+    "name": "XY Series Smartwatch GPS + LTE",
+    "price": "$299.00",
+    "status": ["$5.00 SHIPPING"],
+    "stock": ["PRE - ORDER"]
+  },
+  {
+    "id": 5,
+    "mainImage": "https://m.media-amazon.com/images/I/41fCDR6pjpL._SX300_SY300_QL70_FMwebp_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/41fCDR6pjpL._SX300_SY300_QL70_FMwebp_.jpg",
+      "https://m.media-amazon.com/images/I/81wBTXHaAdL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/81cpHdFfwHL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71tMPWYWRqL._SX679_.jpg"
+    ],
+    "rating": "★★★★☆ (35)",
+    "name": "Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)",
+    "price": "$19.00",
+    "originalPrice": "$24.00",
+    "discount": "5.00",
+    "status": ["$3.50 SHIPPING"],
+    "stock": ["Contact"]
+  },
+  {
+    "id": 6,
+    "mainImage": "https://m.media-amazon.com/images/I/41SbFiUoSOL._SX300_SY300_QL70_FMwebp_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/61nlAS5+y4L._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61dXJigjlJL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61I7YQ4fk4L._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/51kR5Cux4xL._SX679_.jpg"
+    ],
+    "name": "OnePlus 12R (Cool Blue, 8GB RAM, 256GB Storage)",
+    "rating": "★★★★☆ (95)",
+    "price": "$899.00",
+    "status": ["FREE SHIPPING"],
+    "stock": ["inStock"]
+  }
+]

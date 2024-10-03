@@ -1,0 +1,211 @@
+.scOverlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 40;
+}
+
+.sc_box {
+  max-width: 413px !important;
+  width: 100%;
+  position: fixed;
+  right: -415px;
+  top: 0;
+  bottom: 0;
+  border: 1px solid #666;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+  transition: right 1s ease-in-out;
+}
+
+.open {
+  right: 0;
+}
+
+.card_title {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.card_title span button {
+  font-size: 14px;
+  border: none;
+  background-color: transparent;
+}
+
+.card_product {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* .card {
+  padding: 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.card_inner {
+  display: flex;
+  padding: 24px 0;
+  gap: 16px;
+}
+
+.pci_box {
+  width: 80px;
+}
+
+.card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.product_info {
+  flex-grow: 1;
+}
+
+.pi_title {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price_close_icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+  cursor: pointer;
+}
+
+.price_close_icon .price {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.product_info h6 {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.pi_color {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #6c7275;
+  margin-bottom: 8px;
+}
+
+.product_info input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.counterContainer {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.counterButton {
+  font-size: 24px;
+  padding: 0 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.count {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  width: 40px;
+  text-align: center;
+  border: none;
+} */
+
+.subtotal {
+  padding: 13px 0;
+  border-bottom: 1px solid #e8ecef;
+}
+
+.subtotal span {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.subtotal h6 {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.total {
+  padding: 13px 0;
+}
+
+.total span {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.total h6 {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.bottom_content {
+  max-width: 413px;
+  width: 100%;
+  padding: 40px 24px;
+  padding-top: 0;
+  background: #fff;
+}
+
+.checkout_btn {
+  text-align: center;
+}
+
+.checkout_btn a:nth-child(1) {
+  display: block;
+  margin-bottom: 16px;
+}
+
+/* .checkCart_btn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.checkCart_btn button {
+  border: none;
+}
+.checkCart_btn .button {
+  margin: 0;
+  border: none;
+} */

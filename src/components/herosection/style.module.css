@@ -1,0 +1,129 @@
+.heroSection {
+  padding: 0 !important;
+  display: flex;
+  gap: 30px;
+}
+
+.heroSection .category {
+  padding: 30px;
+  margin-top: 20px;
+  border: 1px solid #ececec;
+  border-radius: 15px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.heroSection .category .c_title {
+  position: relative;
+  font-family: "Quicksand", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+.category .c_title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 2px;
+  background-color: #bce3c9;
+}
+
+.heroSection .tabpanel {
+  margin-top: 20px;
+  padding: 60px 90px 30px 60px;
+  border-radius: 30px;
+  color: #fff;
+  background-image: url("../../assets/images/Untitled.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.heroSection .tabpanel .tp_heading {
+  font-family: "Quicksand", sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 72px;
+
+  margin-bottom: 50px;
+}
+.heroSection .tabpanel p {
+  font-family: "Lato", "sans-serif";
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 70px;
+}
+.heroSection .subscribe {
+  border: 1px solid #ccc;
+  width: fit-content;
+  border-radius: 50px;
+}
+.heroSection .subscribe svg {
+  margin-left: 15px;
+  margin-right: 10px;
+}
+.heroSection .subscribe input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+}
+.heroSection .subscribe input::placeholder {
+  color: #fff;
+}
+.heroSection .subscribe button {
+  padding: 20px 40px;
+  background-color: #01a49e;
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    flex-wrap: wrap;
+  }
+  .heroSection .category {
+    width: 100%;
+  }
+}
+@media (max-width: 425px) {
+  .heroSection .tabpanel .tp_heading {
+    font-size: 35px;
+    line-height: 42px;
+  }
+
+  .heroSection .tabpanel {
+    margin-top: 10px;
+    padding: 30px 45px 15px 30px;
+  }
+  .heroSection .tabpanel p {
+    font-size: 18px;
+  }
+  .heroSection .subscribe button {
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .heroSection .subscribe svg {
+    margin-left: 7px;
+    margin-right: 5px;
+    width: 14px;
+    height: 14px;
+  }
+  .heroSection .subscribe input {
+    width: 130px;
+  }
+}
