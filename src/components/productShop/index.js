@@ -32,6 +32,8 @@ import fbimg02 from "../../assets/images/fbimg02.png";
 import fbimg03 from "../../assets/images/fbimg03.png";
 import fbimg04 from "../../assets/images/fbimg04.png";
 import fbimg05 from "../../assets/images/fbimg05.png";
+import MobileProduct from "../../jsonData/mobileProduct.json";
+import SelectDropdown from "../selectDropdown";
 
 const CategoryProductCardData = [
   {
@@ -255,12 +257,43 @@ const productCardData = [
     stock: ["inStock"],
   },
 ];
+const shortingOptions = [
+  { label: "Default" },
+  { label: "A to Z" },
+  { label: "Z to A" },
+  { label: "Low to High" },
+  { label: "High to Low" },
+];
 
 const ProductShop = () => {
   const [priceValueMin, setPriceValueMin] = useState(0);
-  const [priceValueMax, setPriceValueMax] = useState(1000);
+  const [priceValueMax, setPriceValueMax] = useState(10000);
+  const [rangeFilter, setrangeFilter] = useState(MobileProduct);
+  const [sort, setSort] = useState(true);
+
+  const filterrange = () => {
+    const rFilter = MobileProduct.filter(
+      (prod) => prod.price >= priceValueMin && prod.price <= priceValueMax
+    );
+    setrangeFilter(rFilter);
+  };
+
+  const handleRangeFilter = (range) => {
+    setPriceValueMin(range);
+    filterrange();
+  };
+
+  const handleSort = () => {
+    const sorted = [...rangeFilter].sort((a, b) => {
+      const priceA = parseFloat(a.price.replace(",", ""));
+      const priceB = parseFloat(b.price.replace(",", ""));
+      return priceA - priceB;
+    });
+    setrangeFilter(sorted);
+  };
 
   return (
+    
     <Fragment>
       <Container>
         <Row>
@@ -344,21 +377,51 @@ const ProductShop = () => {
                   </span>
                   <h6 className={styles.cpt}>Cell Phones & Tablets</h6>
                   <ul>
-                    <li>All</li>
-                    <li>Iphone</li>
-                    <li>Samsung</li>
-                    <li>Xiaomi</li>
-                    <li>Asus</li>
-                    <li>Oppo</li>
-                    <li>Gaming Smartphone</li>
-                    <li>Ipad</li>
-                    <li>Window Tablets</li>
-                    <li>eReader</li>
-                    <li>Smartphone Chargers</li>
-                    <li>5G Support Smartphone</li>
-                    <li>Smartphone Accessories</li>
-                    <li>Tablets Accessories</li>
-                    <li>Cell Phones</li>
+                    <Link to="">
+                      <li>All</li>
+                    </Link>{" "}
+                    <Link to="">
+                      <li>Iphone</li>
+                    </Link>{" "}
+                    <Link to="">
+                      <li>Samsung</li>
+                    </Link>{" "}
+                    <Link to="">
+                      <li>Xiaomi</li>
+                    </Link>{" "}
+                    <Link to="">
+                      <li>Asus</li>
+                    </Link>{" "}
+                    <Link to="">
+                      <li>Oppo</li>
+                    </Link>{" "}
+                    <Link to="">
+                      <li>Gaming Smartphone</li>
+                    </Link>{" "}
+                    <Link to="">
+                      <li>Ipad</li>
+                    </Link>{" "}
+                    <Link to="">
+                      <li>Window Tablets</li>
+                    </Link>{" "}
+                    <Link to="">
+                      <li>eReader</li>
+                    </Link>{" "}
+                    <Link to="">
+                      <li>Smartphone Chargers</li>
+                    </Link>{" "}
+                    <Link to="">
+                      <li>5G Support Smartphone</li>
+                    </Link>{" "}
+                    <Link to="">
+                      <li>Smartphone Accessories</li>
+                    </Link>
+                    <Link to="">
+                      <li>Tablets Accessories</li>
+                    </Link>{" "}
+                    <Link to="">
+                      <li>Cell Phones</li>
+                    </Link>{" "}
                   </ul>
                 </div>
               </Col>
@@ -473,10 +536,10 @@ const ProductShop = () => {
                       <input
                         type="range"
                         min="0"
-                        max="1000"
+                        max="10000"
                         step="10"
                         value={priceValueMin}
-                        onChange={(e) => setPriceValueMin(e.target.value)}
+                        onChange={(e) => handleRangeFilter(e.target.value)}
                         className={styles.priceRangeMin}
                       />
                     </div>
@@ -497,11 +560,11 @@ const ProductShop = () => {
                           type="number"
                           value={priceValueMax}
                           onChange={(e) => setPriceValueMax(e.target.value)}
-                          placeholder="1000"
+                          placeholder="10000"
                         />
                       </span>
                       <span className={styles.bspan}>
-                        <button>Go</button>
+                        <button onClick={filterrange}>Go</button>
                       </span>
                     </div>
                   </div>
@@ -662,7 +725,12 @@ const ProductShop = () => {
                     </div>
                     <div className={styles.itemOption}>
                       <span className={styles.tb_span}>Show item</span>
-                      <div>{/* make a select */}</div>
+                      <div>
+                        <SelectDropdown
+                          options={shortingOptions}
+                          onChange={handleSort}
+                        />
+                      </div>
                     </div>
                     <div className={styles.viewas}>
                       <span className={styles.tb_span}>view as</span>
@@ -670,7 +738,7 @@ const ProductShop = () => {
                   </div>
                 </div>
                 <div className={styles.pb_products_list}>
-                  {productCardData.map((item, index) => (
+                  {rangeFilter.map((item, index) => (
                     <Col lg={3} md={4} sm={6} xs={12} key={index}>
                       <ProductCard product={item} />
                     </Col>

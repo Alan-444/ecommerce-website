@@ -8,7 +8,7 @@ import CloseIcon from "../../icons/closeIcon";
 
 const LocationData = () => {
   const [openDataBar, setOpenDataBar] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [search, setSearch] = useState("");
   const [filteredLocation, setFilteredLocation] = useState([]);
   const [select, setSelect] = useState("");
 
@@ -27,9 +27,8 @@ const LocationData = () => {
   const filterLocations = (query) => {
     const filtered = PincodeData.filter(
       (item) =>
-        item.Pincode.includes(query) ||
-        item.PostOfficeName.toLowerCase().includes(query.toLowerCase()) ||
-        item.City.toLowerCase().includes(query.toLowerCase())
+        item.code.includes(query) ||
+        item.area.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredLocation(filtered);
   };
@@ -37,20 +36,21 @@ const LocationData = () => {
   const debouncedFilterLocations = debounce(filterLocations, 300);
 
   useEffect(() => {
-    debouncedFilterLocations(searchTerm);
-  }, [searchTerm, debouncedFilterLocations]);
+    debouncedFilterLocations(search);
+  }, [search, debouncedFilterLocations]);
 
   const handleInputChange = (e) => {
-    setSearchTerm(e.target.value);
+    setSearch(e.target.value);
+    console.log(search);
   };
 
   const clearSearch = () => {
-    setSearchTerm("");
+    setSearch("");
   };
 
   const handleSelectSearch = (item) => {
     setSelect(`${item.Pincode} : ${item.PostOfficeName}`);
-    clearSearch(); // Clear the search input after selection
+    clearSearch();
   };
 
   return (
@@ -69,17 +69,17 @@ const LocationData = () => {
             <div className={styles.searchInput}>
               <input
                 type="text"
-                value={searchTerm}
+                // value={search}
                 onChange={handleInputChange}
                 placeholder="Enter area or pincode"
                 className={styles.search_input}
               />
-              <span className={styles.CloseIcon} onClick={clearSearch}>
+              <span className={styles.clearIcon} onClick={clearSearch}>
                 <CloseIcon />
               </span>
             </div>
             <div className={styles.location_list}>
-              {searchTerm.length === 0 && (
+              {search.length === 0 && (
                 <div className={styles.start_typing}>
                   <SearchLocationIcon />
                   "Search your location"
@@ -91,7 +91,7 @@ const LocationData = () => {
                   No results found
                 </div>
               )}
-              {filteredLocation.length > 0 && searchTerm.length > 0 && (
+              {filteredLocation.length > 0 && search.length > 0 && (
                 <>
                   {filteredLocation.map((pincode, index) => (
                     <div
@@ -99,8 +99,7 @@ const LocationData = () => {
                       className={styles.location_item}
                       onClick={() => handleSelectSearch(pincode)}
                     >
-                      {pincode.Pincode}- {pincode.PostOfficeName} -{" "}
-                      {pincode.City}
+                      {pincode.code}- {pincode.area}
                     </div>
                   ))}
                 </>

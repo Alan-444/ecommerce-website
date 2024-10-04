@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 import styles from "./style.module.css";
 
-const SelectDropdown = ({ options = [] }) => {
+const SelectDropdown = ({ options = [], onChange }) => {
   const [selectedOption, setSelectedOption] = useState(
-    options.length > 0 ? options[0].label : "Language"
+    options.length > 0 ? options[0].label : "Select an option"
   );
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
   };
 
   const handleOptionClick = (option) => {
     setSelectedOption(option.label);
     setIsOpen(false);
+    onChange(option.label); // Notify parent of the selected option
   };
 
   return (
@@ -33,7 +34,9 @@ const SelectDropdown = ({ options = [] }) => {
               onClick={() => handleOptionClick(option)}
               className={styles.dropdownOption}
             >
-              <span className={styles.optionIcon}>{option.icon}</span>
+              {option.icon && (
+                <span className={styles.optionIcon}>{option.icon}</span>
+              )}
               <span>{option.label}</span>
             </li>
           ))}

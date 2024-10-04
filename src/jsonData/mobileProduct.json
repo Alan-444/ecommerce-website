@@ -27,7 +27,7 @@
     ],
     "name": "realme NARZO N61 (Voyage Blue,6GB RAM+128GB Storage) 90Hz Eye Comfort Display | IP54 Dust & Water Resistance | 48-Month Fluency | Charger in The Box",
     "rating": "★★★★☆ (80)",
-    "price": "$699.00 - $799.00",
+    "price": "699.00 - 799.00",
     "status": ["FREE SHIPPING"],
     "stock": ["inStock"]
   },
@@ -42,8 +42,8 @@
     ],
     "name": "vivo Y18i (Space Black, 4GB RAM, 64GB Storage) with No Cost EMI/Additional Exchange Offers |Without Charger",
     "rating": "★★★★☆ (65)",
-    "price": "$1,299.00",
-    "originalPrice": "$1,599.00",
+    "price": "1,229.00",
+    "originalPrice": "1,599.00",
     "discount": "300.00",
     "status": ["FREE SHIPPING"],
     "stock": ["inStock"]
@@ -58,8 +58,8 @@
       "https://m.media-amazon.com/images/I/317l8qYtQvL._SX679_.jpg"
     ],
     "name": "XY Series Smartwatch GPS + LTE",
-    "price": "$299.00",
-    "status": ["$5.00 SHIPPING"],
+    "price": "299.00",
+    "status": ["5.00 SHIPPING"],
     "stock": ["PRE - ORDER"]
   },
   {
@@ -73,10 +73,10 @@
     ],
     "rating": "★★★★☆ (35)",
     "name": "Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)",
-    "price": "$19.00",
-    "originalPrice": "$24.00",
+    "price": "19.00",
+    "originalPrice": "24.00",
     "discount": "5.00",
-    "status": ["$3.50 SHIPPING"],
+    "status": ["3.50 SHIPPING"],
     "stock": ["Contact"]
   },
   {
@@ -90,7 +90,7 @@
     ],
     "name": "OnePlus 12R (Cool Blue, 8GB RAM, 256GB Storage)",
     "rating": "★★★★☆ (95)",
-    "price": "$899.00",
+    "price": "899.00",
     "status": ["FREE SHIPPING"],
     "stock": ["inStock"]
   }
