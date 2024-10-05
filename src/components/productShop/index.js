@@ -269,7 +269,6 @@ const ProductShop = () => {
   const [priceValueMin, setPriceValueMin] = useState(0);
   const [priceValueMax, setPriceValueMax] = useState(10000);
   const [rangeFilter, setrangeFilter] = useState(MobileProduct);
-  const [sort, setSort] = useState(true);
 
   const filterrange = () => {
     const rFilter = MobileProduct.filter(
@@ -293,7 +292,6 @@ const ProductShop = () => {
   };
 
   return (
-    
     <Fragment>
       <Container>
         <Row>

@@ -182,7 +182,7 @@
 }
 .searchbar .searchbar_inner .searchbox .input_grp {
   width: 100%;
-  padding: 0 5px;
+  padding: 5px 10px;
   display: flex;
   align-items: center;
 }

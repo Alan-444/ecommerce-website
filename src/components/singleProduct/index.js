@@ -24,13 +24,18 @@ import image6 from "../../assets/images/sp-img-5.png";
 import image7 from "../../assets/images/sp-img-6.png";
 import image8 from "../../assets/images/sp-img-7.png";
 import image9 from "../../assets/images/sp-img-8.png";
+import AllProductsData from "../../jsonData/allProductsData.json";
 
 const SingleProduct = () => {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
   const product =
-    MobileProduct.find((product) => product.id === parseInt(id)) ||
-    ComputerProduct.find((product) => product.id === parseInt(id));
+    AllProductsData.find((product) => product.id === parseInt(id))
+    // ||
+    // MobileProduct.find((product) => product.id === parseInt(id)) ||
+    // ComputerProduct.find((product) => product.id === parseInt(id));
+  
+ 
 
   const swiperRef = useRef(null);
 

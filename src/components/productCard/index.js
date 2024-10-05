@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
       {discount && (
         <span className={styles.discountLabel}>
           SAVE <br />
-          <span>${discount}</span>
+          <span>{discount}</span>
         </span>
       )}
       <Link to={`/singleProduct/${id}`} className={styles.image}>
@@ -33,7 +33,7 @@ const ProductCard = ({ product }) => {
           <div className={styles.name}>{name}</div>
         </Link>
         <div className={styles.pricing}>
-          <span className={styles.currentPrice}>${price}</span>
+          <span className={styles.currentPrice}>{price}</span>
           <span className={styles.originalPrice}>{originalPrice}</span>
         </div>
         <div className={styles.offer_status}>

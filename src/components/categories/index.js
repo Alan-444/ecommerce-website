@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useRef } from "react";
 import Button from "../button";
 import ArrowLeftIcon from "../../icons/arrowLeftIcon";
 import ArrowRightIcon from "../../icons/arrowRightIcon";
@@ -6,28 +6,29 @@ import prod1 from "../../assets/images/prod1.png";
 import prod2 from "../../assets/images/prod2.png";
 import prod3 from "../../assets/images/prod3.png";
 import prod4 from "../../assets/images/prod4.png";
+import { Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/scrollbar";
+import CategoryData from "../../jsonData/categoryData.json";
 import styles from "./style.module.css";
-
-const categoriesdata = [
-  {
-    image: prod1,
-    title: "Laptops",
-  },
-  {
-    image: prod2,
-    title: "PC Gaming",
-  },
-  {
-    image: prod3,
-    title: "Headphones",
-  },
-  {
-    image: prod4,
-    title: "Monitors",
-  },
-];
+import { Link } from "react-router-dom";
 
 const Categories = () => {
+  const swiperRef = useRef(null);
+
+  const handlePrevClick = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slidePrev();
+    }
+  };
+
+  const handleNextClick = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slideNext();
+    }
+  };
+
   return (
     <Fragment>
       <div className={`${styles.categories}`}>
@@ -35,21 +36,50 @@ const Categories = () => {
           <div className={`${styles.c_title}`}>TOP CATEGORIES</div>
           <Button text={"View All"} />
           <div className={`${styles.arrow}`}>
-            <span>
+            <button className={`${styles.prev}`} onClick={handlePrevClick}>
               <ArrowLeftIcon />
-            </span>
-            <span>
+            </button>
+            <button className={`${styles.next}`} onClick={handleNextClick}>
               <ArrowRightIcon />
-            </span>
+            </button>
           </div>
         </div>
         <div className={`${styles.c_category}`}>
-          {categoriesdata.map((item, index) => (
-            <div className={`${styles.category_box}`} key={index}>
-              <img src={item.image} alt="" />
-              <span className={`${styles.title}`}>{item.title}</span>
-            </div>
-          ))}
+          <Swiper
+            modules={[Pagination]}
+            spaceBetween={20}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
+            slidesPerView={4}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+              },
+              640: {
+                slidesPerView: 2,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 4,
+              },
+            }}
+            className={styles.customSwiper}
+            loop={true}
+          >
+            {CategoryData.map((item, index) => (
+              <SwiperSlide key={index}>
+                <Link
+                  to={item.to}
+                  className={`${styles.category_box}`}
+                  key={index}
+                >
+                  <img src={item.image} alt={item.title} />
+                  <span className={`${styles.title}`}>{item.title}</span>
+                </Link>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </Fragment>

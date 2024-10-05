@@ -15,9 +15,6 @@ const Searchbar = () => {
           <div className={`${styles.searchbar}`}>
             <div className={`${styles.searchbar_inner}`}>
               <div className={`${styles.searchbox}`}>
-                <div className={`${styles.select_grp}`}>
-                  <SelectDropdown />
-                </div>
                 <div className={`${styles.input_grp}`}>
                   <input type="text" placeholder="Search anything..." />
                   <button>

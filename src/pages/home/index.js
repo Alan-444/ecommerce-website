@@ -48,7 +48,7 @@ import Projector from "../../assets/images/Projectors-small.png";
 import orangeSofa from "../../assets/images/orange-sofa.png";
 import RecentlyViewed from "../../components/recentlyViewed";
 import viewimg1 from "../../assets/images/xomie-watch.png";
-import MobileProduct from "../../jsonData/mobileProduct.json";
+import AllProductsData from "../../jsonData/allProductsData.json";
 import ComputerProduct from "../../jsonData/computerProduct.json";
 
 const CategoryProductCardData = [
@@ -116,58 +116,6 @@ const CategoryProductCardData2 = [
     count: "16 Items",
   },
 ];
-
-// const productCardData2 = [
-//   {
-//     mainImage: pcimg1,
-//     additionalImages: [""],
-//     name: "SROK Smart Phone 128GB, Oled Retina",
-//     rating: "★★★★☆ (152)",
-//     price: "359.00",
-//     discount: " 199.00",
-//     status: ["FREE SHIPPING"],
-//     stock: ["inStock"],
-//   },
-//   {
-//     mainImage: pcimg2,
-//     additionalImages: [timg1, timg2],
-//     name: "aPod Pro Tablet 2023 LTE + Wifi, GPS Cellular 12.9 Inch, 512GB",
-//     rating: "★★★★☆ (152)",
-//     price: "$979.00 - $1,259.00",
-//     status: ["FREE SHIPPING"],
-//     stock: ["inStock"],
-//   },
-//   {
-//     mainImage: pcimg3,
-//     additionalImages: [""],
-//     name: "uLosk Mini case 2.0, Xenon i10 / 32GB / SSD 512GB / VGA 8GB",
-//     rating: "★★★★☆ (2)",
-//     price: "$1,729.00 ",
-//     originalPrice: "$2,119.00",
-//     discount: " 199.00",
-//     status: ["FREE SHIPPING"],
-//     stock: ["inStock"],
-//   },
-//   {
-//     mainImage: pcimg4,
-//     additionalImages: [""],
-//     name: "Opplo Watch Series 8 GPS + Cellular Stainless Steel Case with Milanese Loop",
-//     price: "$979.00 - $1,259.00",
-//     status: ["$2.98 SHIPPING"],
-//     stock: ["PRE - ORDER"],
-//   },
-//   {
-//     mainImage: pcimg5,
-//     additionalImages: [""],
-//     rating: "★★★★☆ (9)",
-//     name: "iSmart 24V Charger",
-//     price: "$9.00 ",
-//     originalPrice: "$12.00",
-//     discount: " 3.00",
-//     status: ["$3.98 SHIPPING"],
-//     stock: ["Contact"],
-//   },
-// ];
 
 const audioItems = [
   { image: Speakersmall, name: "Speaker", count: 12 },
@@ -248,6 +196,17 @@ const itemsData = [
 ];
 
 const Home = () => {
+  const Smartphone = AllProductsData.filter(
+    (item) => item.category === "Smartphone"
+  );
+  const filteredCategories = AllProductsData.filter(
+    (item) =>
+      item.category === "Laptop" ||
+      item.category === "Mouse" ||
+      item.category === "Tablet" ||
+      item.category === "Desktop"
+  );
+
   return (
     <Fragment>
       <HeroSection />
@@ -351,7 +310,7 @@ const Home = () => {
                   className={styles.customSwiper}
                   loop={true}
                 >
-                  {MobileProduct.map((item, index) => (
+                  {Smartphone.map((item, index) => (
                     <SwiperSlide key={index}>
                       <ProductCard product={item} />
                     </SwiperSlide>
@@ -435,7 +394,7 @@ const Home = () => {
                   className={styles.customSwiper}
                   loop={true}
                 >
-                  {ComputerProduct.map((item, index) => (
+                  {filteredCategories.map((item, index) => (
                     <SwiperSlide key={index}>
                       <ProductCard product={item} />
                     </SwiperSlide>

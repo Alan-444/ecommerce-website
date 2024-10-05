@@ -1,0 +1,276 @@
+[
+  {
+    "id": 1,
+    "mainImage": "https://m.media-amazon.com/images/I/41Bmui2T3TL._SX300_SY300_QL70_FMwebp_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/61DGTh5pVfL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61Xkk+I8kGL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61zDpKrm9KL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/715tDe1ADAL._SX679_.jpg"
+    ],
+    "name": "Acer Aspire Lite 13th Gen Intel Core i3-1305U Thin and Light Premium Laptop",
+    "rating": "★★★★☆ (983)",
+    "price": "$359.00",
+    "originalPrice": "$759.00",
+    "status": ["FREE SHIPPING", "FREE GIFT"],
+    "stock": ["inStock"],
+    "category": "Laptop"
+  },
+  {
+    "id": 2,
+    "mainImage": "https://m.media-amazon.com/images/I/317Kgxsx49L._SX300_SY300_QL70_FMwebp_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/317Kgxsx49L._SX300_SY300_QL70_FMwebp_.jpg",
+      "https://m.media-amazon.com/images/I/51kwgzu4NsL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61MAnTuNTyL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/81fMhlESiQL._SX679_.jpg"
+    ],
+    "name": "Samsung Galaxy Tab A9+ 27.94 cm (11.0 inch) Display",
+    "rating": "★★★★☆ (152)",
+    "price": "$270.00",
+    "originalPrice": "$469.00",
+    "discount": "$199.00",
+    "status": ["FREE SHIPPING"],
+    "stock": ["inStock"],
+    "category": "Tablet"
+  },
+  {
+    "id": 3,
+    "mainImage": "https://m.media-amazon.com/images/I/41iDhJe4E6L._SX300_SY300_QL70_FMwebp_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/41iDhJe4E6L._SX300_SY300_QL70_FMwebp_.jpg",
+      "https://m.media-amazon.com/images/I/614c622AnwL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/41vkPeOZpmL.jpg",
+      "https://m.media-amazon.com/images/I/316N4tFhhNL.jpg"
+    ],
+    "name": "Edifier K550 On-Ear Headphones (Red)",
+    "rating": "★★★★☆ (2)",
+    "price": "$120.00",
+    "originalPrice": "$219.00",
+    "discount": "$99.00",
+    "status": ["FREE SHIPPING"],
+    "stock": ["inStock"],
+    "category": "Headphones"
+  },
+  {
+    "id": 4,
+    "mainImage": "https://m.media-amazon.com/images/I/41K-S-JZNGL._SX300_SY300_QL70_FMwebp_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/41K-S-JZNGL._SX300_SY300_QL70_FMwebp_.jpg",
+      "https://m.media-amazon.com/images/I/818Y2U3NGVL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/51a-kJ0QOFL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71enDeqgx0L._SX679_.jpg"
+    ],
+    "name": "Cyntexia Computer Desktop PC",
+    "price": "$979.00 - $1,259.00",
+    "status": ["$2.98 SHIPPING"],
+    "stock": ["PRE - ORDER"],
+    "category": "Desktop"
+  },
+  {
+    "id": 5,
+    "mainImage": "https://m.media-amazon.com/images/I/61R8XEoVm+L._SX679_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/61R8XEoVm+L._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/51yz55kxPdL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/51tjZKKNpdL._SX679_.jpg"
+    ],
+    "rating": "★★★★☆ (9)",
+    "name": "Lenovo ThinkCentre 19' HD All-in-One Desktop Computer Set",
+    "price": "$979.00",
+    "originalPrice": "$1249.00",
+    "discount": "37.00",
+    "status": ["$3.98 SHIPPING"],
+    "stock": ["Contact"],
+    "category": "Desktop"
+  },
+  {
+    "id": 6,
+    "mainImage": "https://m.media-amazon.com/images/I/4101Dvt-gaL._SX300_SY300_QL70_FMwebp_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/4101Dvt-gaL._SX300_SY300_QL70_FMwebp_.jpg",
+      "https://m.media-amazon.com/images/I/91O3ViwgsuL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/91zQ9l4WxVL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/91+Mf4jMajL._SX679_.jpg"
+    ],
+    "name": "BOSO 2 Wireless On Ear Headphone",
+    "rating": "★★★★☆ (152)",
+    "price": "$359.00",
+    "status": ["FREE SHIPPING", "FREE GIFT"],
+    "stock": ["inStock"],
+    "category": "Headphones"
+  },
+  {
+    "id": 7,
+    "mainImage": "https://m.media-amazon.com/images/I/416t0eHB3SL._SX300_SY300_QL70_FMwebp_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/416t0eHB3SL._SX300_SY300_QL70_FMwebp_.jpg",
+      "https://m.media-amazon.com/images/I/811iAYTobjL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71fWCGxkKAL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61ZartTZAML._SX679_.jpg"
+    ],
+    "name": "Samsung Galaxy M05 (Mint Green)",
+    "rating": "★★★★☆ (120)",
+    "price": "$499.00",
+    "discount": "$349.00",
+    "status": ["FREE SHIPPING"],
+    "stock": ["inStock"],
+    "category": "Smartphone"
+  },
+  {
+    "id": 8,
+    "mainImage": "https://m.media-amazon.com/images/I/4184iNRaFsL._SX300_SY300_QL70_FMwebp_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/4184iNRaFsL._SX300_SY300_QL70_FMwebp_.jpg",
+      "https://m.media-amazon.com/images/I/81J-QSD9GyL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71wJIiE3dJL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61n5xGIaQpL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/51+5ZucVdsL._SX679_.jpg"
+    ],
+    "name": "realme NARZO N61 (Voyage Blue)",
+    "rating": "★★★★☆ (80)",
+    "price": "$699.00 - $799.00",
+    "status": ["FREE SHIPPING"],
+    "stock": ["inStock"],
+    "category": "Smartphone"
+  },
+  {
+    "id": 9,
+    "mainImage": "https://m.media-amazon.com/images/I/4189N8RLVYL._SX300_SY300_QL70_FMwebp_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/71BYvNUoumL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71sgEIlSvfL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61Z49vScNSL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61vThyaOrHL._SX679_.jpg"
+    ],
+    "name": "Logitech G502 HERO High Performance Gaming Mouse",
+    "rating": "★★★★★ (160)",
+    "price": "$3,695.00",
+    "originalPrice": "$5,495.00",
+    "discount": "-33%",
+    "status": ["FREE SHIPPING"],
+    "stock": ["inStock"],
+    "category": "Mouse"
+  },
+  {
+    "id": 10,
+    "mainImage": "https://m.media-amazon.com/images/I/41Aw8+krn+L._SY300_SX300_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/61DBwMU6QyL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71RmM9Ar9bL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71bVMtDKytL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/710gjmwJBcL._SX679_.jpg"
+    ],
+    "name": "Asus TUF Gaming A15 FA506II",
+    "rating": "★★★★☆ (250)",
+    "price": "$60,990.00",
+    "originalPrice": "$83,990.00",
+    "discount": "-27%",
+    "status": ["FREE SHIPPING"],
+    "stock": ["inStock"],
+    "category": "Laptop"
+  },
+  {
+    "id": 11,
+    "mainImage": "https://m.media-amazon.com/images/I/719xn0KawFL._SX679_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/81nX+rBvvJL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/81UxslPQ82L._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/81M92HccXiL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/81zS93A2aPL._SX679_.jpg"
+    ],
+    "name": "Boult x Mustang Torq Newly Launched Truly Wireless in Ear Earbuds with 50H Playtime, App Support, Quad Mic ENC, 45ms Low Latency, Breathing LEDs, 13mm Drivers, Made in India ear buds TWS Bluetooth 5.4",
+    "rating": "★★★★☆ (300)",
+    "price": "$1,498.00",
+    "originalPrice": "$5,999.00",
+    "discount": "-75%",
+    "status": ["FREE SHIPPING"],
+    "stock": ["inStock"],
+    "category": "Earbuds"
+  },
+  {
+    "id": 12,
+    "mainImage": "https://m.media-amazon.com/images/I/21gs-F+nkmL._SY300_SX300_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/5169GwpmTQL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61lwaM1F1RL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/31QOmqEqi0L._SS40_.jpg",
+      "https://m.media-amazon.com/images/I/418bN2KBFBL._SX679_.jpg"
+    ],
+    "name": "Apple AirPods Pro (2nd Generation)",
+    "rating": "★★★★★ (500)",
+    "price": "$1,950",
+    "originalPrice": "$3,500.00",
+    "discount": "-44%",
+    "status": ["FREE SHIPPING"],
+    "stock": ["inStock"],
+    "category": "Earbuds"
+  },
+  {
+    "id": 13,
+    "mainImage": "https://m.media-amazon.com/images/I/41-oAXcWXaL._SY300_SX300_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/61slrN5n-FL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61gaK6HTjKL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/511nLbHvqnL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/41hc-2zJc7L._SX679_.jpg"
+    ],
+    "name": "vivo Y18i (Space Black, 4GB RAM, 64GB Storage) with No Cost EMI/Additional Exchange Offers |Without Charger",
+    "rating": "★★★★☆ (65)",
+    "price": "1,229.00",
+    "originalPrice": "1,599.00",
+    "discount": "300.00",
+    "status": ["FREE SHIPPING"],
+    "stock": ["inStock"],
+    "category": "Smartphone"
+  },
+  {
+    "id": 14,
+    "mainImage": "https://m.media-amazon.com/images/I/41o61kBDGdL._SX300_SY300_QL70_FMwebp_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/41o61kBDGdL._SX300_SY300_QL70_FMwebp_.jpg",
+      "https://m.media-amazon.com/images/I/61tP8bXbWZL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/21S9xciDu2L._SX38_SY50_CR,0,0,38,50_.jpg",
+      "https://m.media-amazon.com/images/I/317l8qYtQvL._SX679_.jpg"
+    ],
+    "name": "XY Series Smartwatch GPS + LTE",
+    "price": "299.00",
+    "status": ["5.00 SHIPPING"],
+    "stock": ["PRE - ORDER"],
+    "category": "Smartphone"
+  },
+  {
+    "id": 15,
+    "mainImage": "https://m.media-amazon.com/images/I/41fCDR6pjpL._SX300_SY300_QL70_FMwebp_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/41fCDR6pjpL._SX300_SY300_QL70_FMwebp_.jpg",
+      "https://m.media-amazon.com/images/I/81wBTXHaAdL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/81cpHdFfwHL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71tMPWYWRqL._SX679_.jpg"
+    ],
+    "rating": "★★★★☆ (35)",
+    "name": "Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)",
+    "price": "19.00",
+    "originalPrice": "24.00",
+    "discount": "5.00",
+    "status": ["3.50 SHIPPING"],
+    "stock": ["Contact"],
+    "category": "Smartphone"
+  },
+  {
+    "id": 16,
+    "mainImage": "https://m.media-amazon.com/images/I/41SbFiUoSOL._SX300_SY300_QL70_FMwebp_.jpg",
+    "additionalImages": [
+      "https://m.media-amazon.com/images/I/61nlAS5+y4L._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61dXJigjlJL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61I7YQ4fk4L._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/51kR5Cux4xL._SX679_.jpg"
+    ],
+    "name": "OnePlus 12R (Cool Blue, 8GB RAM, 256GB Storage)",
+    "rating": "★★★★☆ (95)",
+    "price": "899.00",
+    "status": ["FREE SHIPPING"],
+    "stock": ["inStock"],
+    "category": "Smartphone"
+  }
+]

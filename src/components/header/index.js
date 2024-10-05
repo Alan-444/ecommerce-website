@@ -4,14 +4,19 @@ import OfferBar from "./offerbar";
 import Navbar from "./nevbar";
 import TopBar from "./topbar";
 import Searchbar from "./searchbar";
+import { Container, Row } from "react-bootstrap";
 
 const Header = () => {
   return (
     <Fragment>
       <OfferBar />
-      <TopBar />
-      <Navbar />
-      <Searchbar />
+      <Container>
+        <Row>
+          <TopBar />
+          <Navbar />
+          <Searchbar />
+        </Row>
+      </Container>
     </Fragment>
   );
 };

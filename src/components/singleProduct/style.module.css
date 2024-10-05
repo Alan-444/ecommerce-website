@@ -59,6 +59,7 @@
   list-style: none;
   align-items: center;
   justify-content: space-evenly;
+  padding: 0;
 }
 
 .spi_ProductItems ul li {

@@ -13,6 +13,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
+import AllProductsData from "../../jsonData/allProductsData.json";
 import styles from "./style.module.css";
 
 const productCardData = [
@@ -164,7 +165,7 @@ const BestSellerProduct = () => {
             className={styles.customSwiper}
             loop={true}
           >
-            {productCardData.map((item, index) => (
+            {AllProductsData.map((item, index) => (
               <SwiperSlide key={index}>
                 <ProductCard product={item} />
               </SwiperSlide>

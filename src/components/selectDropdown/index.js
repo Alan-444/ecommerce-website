@@ -14,7 +14,7 @@ const SelectDropdown = ({ options = [], onChange }) => {
   const handleOptionClick = (option) => {
     setSelectedOption(option.label);
     setIsOpen(false);
-    onChange(option.label); // Notify parent of the selected option
+    onChange(option.label);
   };
 
   return (
