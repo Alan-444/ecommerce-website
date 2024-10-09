@@ -6,7 +6,7 @@ const ProductCard = ({ product }) => {
   const {
     id,
     mainImage,
-    additionalImages,
+    // additionalImages,
     name,
     rating,
     price,
@@ -48,13 +48,13 @@ const ProductCard = ({ product }) => {
             {StockItem}
           </span>
         ))}
-        <div className={styles.p_img}>
+        {/* <div className={styles.p_img}>
           {additionalImages.map((image, index) => (
             <div key={index}>
               <img src={image} alt="" />
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

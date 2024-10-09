@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import HeroSection from "../../components/herosection";
 import { Col, Container, Row } from "react-bootstrap";
 import FeaturedBrands from "../../components/featuredbrands";
@@ -49,7 +49,6 @@ import orangeSofa from "../../assets/images/orange-sofa.png";
 import RecentlyViewed from "../../components/recentlyViewed";
 import viewimg1 from "../../assets/images/xomie-watch.png";
 import AllProductsData from "../../jsonData/allProductsData.json";
-import ComputerProduct from "../../jsonData/computerProduct.json";
 
 const CategoryProductCardData = [
   {
@@ -196,8 +195,13 @@ const itemsData = [
 ];
 
 const Home = () => {
-  const Smartphone = AllProductsData.filter(
-    (item) => item.category === "Smartphone"
+  const [selectedBrand, setSelectedBrand] = useState("Smartphone");
+
+
+  const Smartphone = AllProductsData.filter((item) =>
+    selectedBrand === "Smartphone"
+      ? item.category === "Smartphone"
+      : item.brand === selectedBrand
   );
   const filteredCategories = AllProductsData.filter(
     (item) =>
@@ -267,6 +271,9 @@ const Home = () => {
                     {CategoryProductCardData.map((phone, index) => (
                       <Col lg={4} key={index}>
                         <CategoryProductCard
+                          onClick={() => {
+                            setSelectedBrand(phone.title);
+                          }}
                           imageUrl={phone.imageUrl}
                           title={phone.title}
                           count={phone.count}
